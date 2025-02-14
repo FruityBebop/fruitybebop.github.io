@@ -5,3 +5,5 @@
   <p>-moved to github from neocities </p>
   <p>-removed a broken link and related text box </p>
   <p>-changed website icon</p>
+  <p>-added new art</p>
+  <p>-repositioned fbopspin</p>
