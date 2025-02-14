@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Results</title>
+    </head>
+    <body>
+       <h1>Thanks Mate!</h1>
+    
+    <a href="index.html">Back to Awesome Website</a>
+        <div id="results"></div>
+        <script>
+            const resultslist = document.getElementById('results');
+
+            // Use URLSearchParams or fallback if unsupported
+            function parseQueryString(queryString) {
+                const params = {};
+                queryString
+                    .substring(1) // Remove the "?"
+                    .split("&")
+                    .forEach(pair => {
+                        const [key, value] = pair.split("=");
+                        if (key) params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+                    });
+                return params;
+            }
+
+            const params = window.URLSearchParams 
+                ? new URLSearchParams(window.location.search)
+                : parseQueryString(window.location.search);
+
+            if (params.forEach) {
+                params.forEach((value, name) => {
+                    const line = document.createElement('p');
+                    line.textContent = `${name}: ${value}`;
+                    resultslist.appendChild(line);
+                });
+            } else {
+                for (const name in params) {
+                    const line = document.createElement('p');
+                    line.textContent = `${name}: ${params[name]}`;
+                    resultslist.appendChild(line);
+                }
+            }
+        </script>
+    </body>
+</html>
