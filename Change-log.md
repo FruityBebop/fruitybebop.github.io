@@ -7,3 +7,6 @@
   <p>-changed website icon</p>
   <p>-added new art</p>
   <p>-repositioned fbopspin</p>
+
+# Change log 5/4/25
+  <p> -removed jake paul image</p>
