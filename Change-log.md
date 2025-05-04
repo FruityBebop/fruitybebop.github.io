@@ -10,3 +10,5 @@
 
 # Change log 5/4/25
   <p> -removed jake paul image</p>
+  <p> -added featured artwork</p>
+  <p> -moved featured info link</p>
